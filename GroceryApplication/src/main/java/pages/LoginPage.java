@@ -22,21 +22,20 @@ public class LoginPage {
 	@FindBy(xpath="//span[text()='7rmart supermarket']") WebElement homepage;
     @FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") WebElement alertmessage;
 	
-	public void enterUserName(String username)
+	public LoginPage enterUserName(String username)
 	{
 		userName.sendKeys(username);
+		return this;
 	}
-	public void enterPassword(String password) 
+	public LoginPage  enterPassword(String password) 
 	{
 		passWordField.sendKeys(password);
+		return this;
 	}
-	public void clicksigninButton() 
+	public HomePage clicksigninButton() 
 	{
 		signInButton.click();
-	}
-	public void clickOnLogin()
-	{
-		signInButton.click();
+		return new HomePage(driver);
 	}
 	public boolean homePagedDisplayed()
 	{

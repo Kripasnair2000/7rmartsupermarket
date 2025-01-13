@@ -2,22 +2,28 @@ package testcase;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
+import constant.Constant;
 import pages.CategoryPage;
 import pages.HomePage;
 import pages.LoginPage;
+import utilities.GeneralUtilities;
 
 public class CategoryTest extends BaseClass {
 	CategoryPage category;
 	LoginPage lp;
 	HomePage hp;
+	GeneralUtilities gu=new GeneralUtilities();
   @Test
   public void verifyAddNewCatgoryWithValidDetails() throws IOException {
 	  lp=new LoginPage(driver);
 	  hp=lp.loginByExcelData();
 	  hp=new HomePage(driver);
 	  category=hp.clickCategoryButton().enterCategoryField().uploadImage().clickOptions().clickCategorySaveButton();
+	  boolean actualResult = category.getAlertMessage();
+	  boolean expectedResult = true;
+	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifyAddCategory);  
   }
   @Test
   public void verifySearchExistingCategory() throws IOException{
@@ -25,7 +31,9 @@ public class CategoryTest extends BaseClass {
 	  hp=lp.loginByExcelData();
 	  hp=new HomePage(driver);
 	  category=hp.clickCategoryButton().clickSearchButton().enterSearchCategoryField().clickSearchButtonInside();
-
+	  boolean actualResult = category.checkOnResultMessage();
+	  boolean expectedResult = true;
+	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifySearchCategory); 
   }
   @Test
   public void verifyReset() throws IOException {
@@ -33,6 +41,9 @@ public class CategoryTest extends BaseClass {
 	  lp.loginByExcelData();
 	  hp=new HomePage(driver);
 	  category=hp.clickCategoryButton().clickResetButton();
+	  boolean actualResult =category.checkOnTableTitleIsDisplayed();
+	  boolean expectedResult = true;
+	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifyResetCategory); 
 
   }
   @Test
@@ -40,7 +51,10 @@ public class CategoryTest extends BaseClass {
 	  lp=new LoginPage(driver);
 	  lp.loginByExcelData();
 	  hp=new HomePage(driver);
-	  category=hp.clickCategoryButton().clickOnEditButton();
+	  category=hp.clickCategoryButton().clickOnEditButton().enterUpdateCategory().clickUpdateButton();
+	  boolean actualResult = category.getAlertMessageForEdit();
+	  boolean expectedResult = true;
+	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifyEditButton);
   }
   @Test
   public void verifyDeleteButton() throws IOException {
@@ -48,6 +62,9 @@ public class CategoryTest extends BaseClass {
 	  lp.loginByExcelData();
 	  hp=new HomePage(driver);
 	  category=hp.clickCategoryButton().clickOnDeleteButton();
-	  driver.switchTo().alert().accept();
+	  gu.acceptAlert();
+	  boolean actualResult = category.getAlertMessageForDelete();
+	  boolean expectedResult = true;
+	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifyDeleteButton);  
   }
 }

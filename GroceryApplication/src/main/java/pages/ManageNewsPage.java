@@ -20,7 +20,9 @@ public class ManageNewsPage {
 	@FindBy(xpath = "//a[text()=' Search']")WebElement searchButton;
 	@FindBy(xpath = "//input[@name='un']")WebElement searchNewstitlefield;
 	@FindBy(xpath = "//button[@name='Search']")WebElement submitSearchButton;
+	@FindBy(xpath="//h5[text()=' Alert!']") WebElement alertMessage;
 	@FindBy(xpath = "//a[text()=' Reset']")WebElement resetButton;
+	@FindBy(xpath="//h4[text()='Manage News']") WebElement tableTitle;
 
 	public ManageNewsPage clickOnNewManageNewsButton() {
 		newManageNewsButton.click();
@@ -61,5 +63,13 @@ public class ManageNewsPage {
 	public ManageNewsPage clickOnResetButton() {
 		resetButton.click();
 		return this;
+	}
+	public boolean getAlertMessage()
+	{
+		return alertMessage.isDisplayed();
+	}
+	public boolean checkOnTableTitleIsDisplayed()
+	{
+		return tableTitle.isDisplayed();
 	}
 }

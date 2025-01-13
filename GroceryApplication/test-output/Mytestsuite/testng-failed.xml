@@ -7,14 +7,17 @@
   </listeners>
   <test thread-count="5" name="myTest(failed)">
     <classes>
-      <class name="testcase.LoginTest">
+      <class name="testcase.CategoryTest">
         <methods>
-          <include name="verifyUserLoginWithValidCredentials"/>
+          <include name="verifyEditButton"/>
           <include name="driverQuit"/>
-          <include name="loginWithInValidUsernameAndInvalidPassword" invocation-numbers="0"/>
+          <include name="verifyDeleteButton"/>
+          <include name="verifyReset"/>
+          <include name="verifySearchExistingCategory"/>
+          <include name="verifyAddNewCatgoryWithValidDetails"/>
           <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- testcase.LoginTest -->
+      </class> <!-- testcase.CategoryTest -->
     </classes>
   </test> <!-- myTest(failed) -->
 </suite> <!-- Failed suite [Mytestsuite] -->

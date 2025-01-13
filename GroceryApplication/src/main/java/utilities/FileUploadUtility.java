@@ -67,7 +67,7 @@ public class FileUploadUtility {
 	}
 	}
 	public void fileuploadsendKeys(WebElement element) {
-		element.sendKeys("C:\\Users\\KRIPA S NAIR\\OneDrive\\Pictures\\Screenshots\\Screenshot 2025-01-07 141001.png");
+		element.sendKeys("C:\\Users\\KRIPA S NAIR\\OneDrive\\Pictures\\Screenshots\\Screenshot 2025-01-13 132651.png");
 	}
 
 }

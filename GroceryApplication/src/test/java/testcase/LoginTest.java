@@ -47,7 +47,7 @@ public class LoginTest extends BaseClass {
 		login = new LoginPage(driver);
 		login.enterUserName(username);
 		login.enterPassword(password);
-		login.clickOnLogin();
+		login.clicksigninButton();
 		boolean expectedresult = true;
 		boolean actualresult = login.getAlert().contains("Invalid Username/Password");
 		Assert.assertEquals(expectedresult, actualresult, Constant.lp_loginWithInvalidUsernameAndValidPassword);

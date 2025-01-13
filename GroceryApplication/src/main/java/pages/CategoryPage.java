@@ -24,9 +24,14 @@ public class CategoryPage {
 	@FindBy(xpath="//button[@type='submit']")WebElement searchButtonInside;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")WebElement resetButton;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/category/edit?edit=614&page_ad=1']")WebElement editButton;
+	@FindBy(xpath="//input[@id='category']")WebElement enterUpdateCategory;
+	@FindBy(xpath="//button[@type='submit']")WebElement updateButton;
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/category/delete?del=604&page_ad=1']")WebElement deleteButton;
-
-	
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertMessage;
+	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']") WebElement resultNotFoundMessage;
+	@FindBy(xpath="//h4[text()='List Categories']") WebElement tableTitle;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertEditMessage;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertDeleteMessage;
 //	public void clickCategoryButton() {
 //		categoryButton.click();
 //	}
@@ -57,7 +62,7 @@ public class CategoryPage {
 		return this;
 	}
 	public CategoryPage enterSearchCategoryField() {
-		enterSearchCategory.sendKeys("Icecream");
+		enterSearchCategory.sendKeys("LapTop");
 		return this;
 	}
 	public CategoryPage clickSearchButtonInside() {
@@ -73,9 +78,32 @@ public class CategoryPage {
 		editButton.click();
 		return this;
 	}
+	public CategoryPage enterUpdateCategory() {
+		enterUpdateCategory.sendKeys("Updated toys");
+		return this;
+	}
+	public CategoryPage clickUpdateButton() {
+		updateButton.click();
+		return this;
+	}
 	public CategoryPage clickOnDeleteButton() {
 		deleteButton.click();
 		return this;
+	}
+	public boolean getAlertMessage(){
+		return alertMessage.isDisplayed();
+	}
+	public boolean checkOnResultMessage(){
+		return resultNotFoundMessage.isDisplayed();
+	}
+	public boolean checkOnTableTitleIsDisplayed() {
+		return tableTitle.isDisplayed();
+	}
+	public boolean getAlertMessageForEdit() {
+		return alertEditMessage.isDisplayed();
+	}
+	public boolean getAlertMessageForDelete() {
+		return alertDeleteMessage.isDisplayed();
 	}
 }
 	
