@@ -1,18 +1,18 @@
 <suite name="Mytestsuite">
-<parameter name="browser" value="Chrome"></parameter>
+	<parameter name="browser" value="Chrome"></parameter>
 	<listeners>
-		<listener class-name="listeners.Listeners"> 
-			 </listener>
-		</listeners>
+		<listener class-name="listeners.Listeners"> </listener>
+		<listener class-name="listeners.RetryListener"></listener>
+	</listeners>
 	<test threadcount="3" name="myTest">
-		
+
 		<classes>
-			
-<!-- <class name="testcase.LoginTest"></class>-->
-<!--<class name="testcase.CategoryTest"></class> -->
-<!--<class name="testcase.SubCategoryTest"></class>-->
-<class name="testcase.ManageFooterTextTest"></class>
+
+			<!-- <class name="testcase.LoginTest"></class>-->
+			<!--<class name="testcase.CategoryTest"></class> -->
+			<class name="testcase.SubCategoryTest"></class>
+			<!--<class name="testcase.ManageFooterTextTest"></class>-->
 		</classes>
-		
+
 	</test>
 </suite>

@@ -1,20 +1,21 @@
 <suite name="Parallel testing" parallel="tests" thread-count="2">
 	<parameter name="browser" value="Chrome"></parameter>
-	<test threadcount="3" name="Test1">
+	<test threadcount="3"
+		name="Test1">
 		<classes>
-		<!-- <class name="testcase.LoginTest"></class>-->
-		<class name="testcase.CategoryTest"></class> 
-		<!--<class name="testcase.SubCategoryTest"></class>-->
-		<!--	<class name="testcase.ManageNewsTest"></class>-->
+			<class name="testcase.LoginTest"></class>
+			<class name="testcase.CategoryTest"></class>
+
 		</classes>
 
 	</test>
-	<!-- <test threadcount="3" name="Test2">
+	<test
+		threadcount="3" name="Test2">
 		<parameter name="browser" value="Edge"></parameter>
 		<classes>
-			<class name="testcase.LoginTest"></class>
-
+			<class name="testcase.ManageNewsTest"></class>
 		</classes>
 
-	</test>-->
+	</test>
+
 </suite>

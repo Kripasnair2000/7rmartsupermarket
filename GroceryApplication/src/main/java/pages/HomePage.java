@@ -14,7 +14,7 @@ public class HomePage {
 	}
 	@FindBy(xpath="//span[text()='7rmart supermarket']")WebElement homePageText;
 	@FindBy(xpath="//p[text()='Category']") WebElement categoryButton;
-	@FindBy(xpath="//p[text()='Sub Category']") WebElement subCategoryButton;
+	@FindBy(xpath="//li//p[text()='Sub Category']") WebElement subCategoryButton;
 	@FindBy(xpath="//p[text()='Manage News']") WebElement manageNewsButton;
 	@FindBy(xpath="//p[contains(text(), 'Manage Footer Text')]")WebElement managefootertextButton;
 	

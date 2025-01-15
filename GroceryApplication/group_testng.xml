@@ -1,19 +1,18 @@
 <suite name="Grouping">
-<parameter name="browser" value="Chrome"></parameter>
+	<parameter name="browser" value="Chrome"></parameter>
 	<test threadcount="3" name="myTest">
 		<groups>
-		<run>
-		<include name="smoke">
-		</include>
-		</run>
+			<run>
+				<include name="smoke">
+				</include>
+			</run>
 		</groups>
 		<classes>
-			
-<class name="testcase.LoginTest"></class>
 
- 
+			<class name="testcase.ManageNewsTest"></class>
+
 
 		</classes>
-		
+
 	</test>
 </suite>

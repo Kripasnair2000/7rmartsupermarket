@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,17 @@
                     <div class="method-list-content passed suite-Mytestsuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Mytestsuite" title="testcase.ManageFooterTextTest" class="method navigator-link" hash-for-method="editFooterTextWithNewValidText">editFooterTextWithNewValidText</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Mytestsuite" title="testcase.SubCategoryTest" class="method navigator-link" hash-for-method="verifyAddSubCategoryWithValidDetails">verifyAddSubCategoryWithValidDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mytestsuite" title="testcase.SubCategoryTest" class="method navigator-link" hash-for-method="verifyResetSubCategory">verifyResetSubCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Mytestsuite" title="testcase.SubCategoryTest" class="method navigator-link" hash-for-method="verifySearchSubCategory">verifySearchSubCategory</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Mytestsuite -->
@@ -121,14 +131,28 @@
           <div class="suite-Mytestsuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testcase.ManageFooterTextTest</span>
+              <span class="class-name">testcase.SubCategoryTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="editFooterTextWithNewValidText">
-                  </a> <!-- editFooterTextWithNewValidText -->
-                  <span class="method-name">editFooterTextWithNewValidText</span>
+                  <a name="verifyAddSubCategoryWithValidDetails">
+                  </a> <!-- verifyAddSubCategoryWithValidDetails -->
+                  <span class="method-name">verifyAddSubCategoryWithValidDetails</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyResetSubCategory">
+                  </a> <!-- verifyResetSubCategory -->
+                  <span class="method-name">verifyResetSubCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchSubCategory">
+                  </a> <!-- verifySearchSubCategory -->
+                  <span class="method-name">verifySearchSubCategory</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,10 +170,11 @@
   &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;listeners.Listeners&quot;/&gt;
+    &lt;listener class-name=&quot;listeners.RetryListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;myTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcase.ManageFooterTextTest&quot;/&gt;
+      &lt;class name=&quot;testcase.SubCategoryTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- myTest --&gt;
 &lt;/suite&gt; &lt;!-- Mytestsuite --&gt;
@@ -189,16 +214,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editFooterTextWithNewValidText')
-data.setCell(0, 2, 'testcase.ManageFooterTextTest')
-data.setCell(0, 3, 2672);
+data.setCell(0, 1, 'verifyAddSubCategoryWithValidDetails')
+data.setCell(0, 2, 'testcase.SubCategoryTest')
+data.setCell(0, 3, 4386);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifySearchSubCategory')
+data.setCell(1, 2, 'testcase.SubCategoryTest')
+data.setCell(1, 3, 1960);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyResetSubCategory')
+data.setCell(2, 2, 'testcase.SubCategoryTest')
+data.setCell(2, 3, 1672);
 window.suiteTableData['Mytestsuite']= { tableData: data, tableDiv: 'times-div-Mytestsuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Mytestsuite">
               </div> <!-- times-div-Mytestsuite -->
             </div> <!-- times-div -->
@@ -224,18 +257,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcase.ManageFooterTextTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcase.SubCategoryTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowser(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">editFooterTextWithNewValidText</span>
-                <span class="method-start">3254 ms</span>
+                <span class="method-name">verifyAddSubCategoryWithValidDetails</span>
+                <span class="method-start">2703 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">driverQuit([TestResult name=editFooterTextWithNewValidText status=SUCCESS method=ManageFooterTextTest.editFoote...)</span>
-                <span class="method-start">5932 ms</span>
+                <span class="method-name">driverQuit([TestResult name=verifyAddSubCategoryWithValidDetails status=SUCCESS method=SubCategoryTest.verifyAd...)</span>
+                <span class="method-start">7099 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">7103 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchSubCategory</span>
+                <span class="method-start">8934 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverQuit([TestResult name=verifySearchSubCategory status=SUCCESS method=SubCategoryTest.verifySearchSubCatego...)</span>
+                <span class="method-start">10897 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowser(Chrome)</span>
+                <span class="method-start">10899 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyResetSubCategory</span>
+                <span class="method-start">12797 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverQuit([TestResult name=verifyResetSubCategory status=SUCCESS method=SubCategoryTest.verifyResetSubCategory...)</span>
+                <span class="method-start">14477 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -36,9 +36,7 @@ public class CategoryPage {
 	@FindBy(xpath="//h4[text()='List Categories']") WebElement tableTitle;
 	@FindBy(xpath="//h5[text()=' Alert!']")WebElement alertEditMessage;
 	@FindBy(xpath="/h5[text()=' Alert!']")WebElement alertDeleteMessage;
-//	public void clickCategoryButton() {
-//		categoryButton.click();
-//	}
+
 	public CategoryPage clickNewButton() {
 		newButton.click();
 		return this;
