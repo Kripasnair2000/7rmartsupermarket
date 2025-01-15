@@ -27,15 +27,10 @@ public class CategoryPage {
 	@FindBy(xpath="//input[@class='form-control']")WebElement enterSearchCategory;
 	@FindBy(xpath="//button[@type='submit']")WebElement searchButtonInside;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']") WebElement resetButton;
-	@FindBy(xpath="//a[@class='btn btn-sm btn btn-primary btncss']")WebElement editButton;
-	@FindBy(xpath="//input[@id='category']")WebElement enterUpdateCategory;
-	@FindBy(xpath="//button[@type='submit']")WebElement updateButton;
-	@FindBy(xpath="//a[@class='btn btn-sm btn btn-danger btncss']")WebElement deleteButton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertMessage;
 	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']") WebElement resultNotFoundMessage;
 	@FindBy(xpath="//h4[text()='List Categories']") WebElement tableTitle;
-	@FindBy(xpath="//h5[text()=' Alert!']")WebElement alertEditMessage;
-	@FindBy(xpath="/h5[text()=' Alert!']")WebElement alertDeleteMessage;
+
 
 	public CategoryPage clickNewButton() {
 		newButton.click();
@@ -91,22 +86,6 @@ public class CategoryPage {
 		resetButton.click();
 		return this;
 	}
-	public CategoryPage clickOnEditButton() {
-		editButton.click();
-		return this;
-	}
-	public CategoryPage enterUpdateCategory() {
-		enterUpdateCategory.sendKeys("Phone1232");
-		return this;
-	}
-	public CategoryPage clickUpdateButton() {
-		updateButton.click();
-		return this;
-	}
-	public CategoryPage clickOnDeleteButton() {
-		deleteButton.click();
-		return this;
-	}
 	public boolean getAlertMessage(){
 		return alertMessage.isDisplayed();
 	}
@@ -115,12 +94,6 @@ public class CategoryPage {
 	}
 	public boolean checkOnTableTitleIsDisplayed() {
 		return tableTitle.isDisplayed();
-	}
-	public boolean getAlertMessageForEdit() {
-		return alertEditMessage.isDisplayed();
-	}
-	public boolean getAlertMessageForDelete() {
-		return alertDeleteMessage.isDisplayed();
 	}
 }
 	
