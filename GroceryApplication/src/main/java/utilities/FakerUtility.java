@@ -28,14 +28,10 @@ public class FakerUtility {
     {
         return faker.name().username();  
     }
-
-    
     public String getText() 
     {
         return faker.lorem().paragraph(); 
     }
-
-    
     public String getDateOfBirth() 
     {
         return faker.date().birthday().toString();  

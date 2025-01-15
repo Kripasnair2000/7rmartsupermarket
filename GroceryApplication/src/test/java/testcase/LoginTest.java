@@ -16,31 +16,13 @@ public class LoginTest extends BaseClass {
 	
   @Test
   public void verifyUserLoginWithValidCredentials() throws IOException {
-	  LoginPage login=new LoginPage(driver);
-//	  hp=login.loginByExcelData();
-	  String username="admin";
-	  String password="admin";
-	  login.enterUserName(username);
-	  login.enterPassword(password);
-	  login.clicksigninButton();
+	  login=new LoginPage(driver);
+	  hp= login.loginByExcelData();
 	  boolean actualresult=login.homePagedDisplayed();
 	  boolean expectedresult=true;
 	  Assert.assertEquals(expectedresult,actualresult,Constant.lp_verifyloginwithvalidcredentials);
 	  
   }
-//  @Test(retryAnalyzer=retry.Retry.class)
-//  public void verifyUserLoginWithInValidCredentials() {
-//	  LoginPage login=new LoginPage(driver);
-//	  String username="admin";
-//	  String password="admin12";
-//	  login.enterUserName(username);
-//	  login.enterPassword(password);
-//	  login.clicksigninButton();
-//	  boolean actualresult=login.homePagedDisplayed();
-//	  boolean expectedresult=false;
-//	  expectedresult=true;
-//	  Assert.assertEquals(expectedresult,actualresult,Constant.lp_verifyloginwithinvalidcredentials);
-//  }
 
 	@Test(dataProvider = "data provider")
 	public void loginWithInvalidUsernameAndValidPassword(String username, String password) {
@@ -60,22 +42,22 @@ public class LoginTest extends BaseClass {
 
 	
 	@Test
-	public void loginWithValidUsernameAndInvalidPassword(String username, String password) throws IOException {
+	public void loginWithValidUsernameAndInvalidPassword() throws IOException {
 		login = new LoginPage(driver);
 	    hp=login.loginByExcelData1();
-	    boolean actualresult = login.homePagedDisplayed();
-	    boolean expectedresult = false;
+	    boolean actualresult = login.getAlert().contains("Invalid Username/Password");
+	    boolean expectedresult = true;
 		Assert.assertEquals(expectedresult, actualresult,Constant.lp_loginWithValidUsernameAndInvalidPassword);
 
 	}
 
 
 	@Test
-	public void loginWithInValidUsernameAndInvalidPassword(String username, String password) throws IOException {
+	public void loginWithInValidUsernameAndInvalidPassword() throws IOException {
 		login = new LoginPage(driver);
 	    hp=login.loginByExcelData2();
-	    boolean actualresult = login.homePagedDisplayed();
-	    boolean expectedresult = false;
+	    boolean actualresult = login.getAlert().contains("Invalid Username/Password");
+	    boolean expectedresult = true;
 		Assert.assertEquals(expectedresult, actualresult,Constant.lp_loginWithInValidUsernameAndInvalidPassword);
 
 	}

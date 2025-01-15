@@ -49,7 +49,7 @@ public class GeneralUtilities {
 		return element.getText();
 	}
 
-	public void hoverOverElement(WebElement element) {
+	public void hoverOverElement(WebDriver driver,WebElement element) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).perform();
 	}
@@ -139,7 +139,7 @@ public class GeneralUtilities {
 
 	}
 
-	public void scrollToElement(WebElement element) {
+	public void scrollToElement(WebDriver driver,WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	}

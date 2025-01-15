@@ -5,9 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.GeneralUtilities;
+
 public class CategoryPage {
 	public WebDriver driver;
-	 
+	GeneralUtilities gu=new GeneralUtilities(); 
 	public CategoryPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
@@ -16,22 +18,24 @@ public class CategoryPage {
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")WebElement newButton;
 	@FindBy(xpath="//input[@id='category']")WebElement enterCategory;
 	@FindBy(xpath="//input[@id='main_img']")WebElement imageUpload;
-	@FindBy(xpath="//input[@value='yes' and @name='top_menu']")WebElement showOnTopMenuOption;
-	@FindBy(xpath="//input[@value='yes' and @name='show_home']")WebElement showOnLeftMenuOption;
+	@FindBy(xpath="//li[@id='134-selectable']") WebElement selectGroupsCategoryList;
+	@FindBy(xpath="//li[@id='134-selection']") WebElement selectedGroupsCategoryList;
+	@FindBy(xpath="//label[text()='Show On Top Menu']") WebElement radioButton1;
+	@FindBy(xpath="//label[text()='Show On Left Menu']") WebElement radioButton2;
 	@FindBy(xpath="//button[@type='submit']")WebElement categorySaveButton;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")WebElement searchButton;
 	@FindBy(xpath="//input[@class='form-control']")WebElement enterSearchCategory;
 	@FindBy(xpath="//button[@type='submit']")WebElement searchButtonInside;
-	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']")WebElement resetButton;
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/category/edit?edit=614&page_ad=1']")WebElement editButton;
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-warning']") WebElement resetButton;
+	@FindBy(xpath="//a[@class='btn btn-sm btn btn-primary btncss']")WebElement editButton;
 	@FindBy(xpath="//input[@id='category']")WebElement enterUpdateCategory;
 	@FindBy(xpath="//button[@type='submit']")WebElement updateButton;
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/category/delete?del=604&page_ad=1']")WebElement deleteButton;
+	@FindBy(xpath="//a[@class='btn btn-sm btn btn-danger btncss']")WebElement deleteButton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alertMessage;
 	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']") WebElement resultNotFoundMessage;
 	@FindBy(xpath="//h4[text()='List Categories']") WebElement tableTitle;
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertEditMessage;
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertDeleteMessage;
+	@FindBy(xpath="//h5[text()=' Alert!']")WebElement alertEditMessage;
+	@FindBy(xpath="/h5[text()=' Alert!']")WebElement alertDeleteMessage;
 //	public void clickCategoryButton() {
 //		categoryButton.click();
 //	}
@@ -40,18 +44,33 @@ public class CategoryPage {
 		return this;
 	}
 	public CategoryPage enterCategoryField(){
-		enterCategory.sendKeys("Lays");
+		enterCategory.sendKeys("Laysgree");
 		return this;
 		
+	}
+	public CategoryPage selectGroupsOnCategoryList()
+	{
+		selectGroupsCategoryList.click();
+		return this;
 	}
 	public CategoryPage uploadImage() {
 		imageUpload.sendKeys("C:\\Users\\KRIPA S NAIR\\OneDrive\\Pictures\\Screenshots\\Screenshot 2025-01-07 141001.png");
 		return this;
 	}
-	public CategoryPage clickOptions() {
-		showOnTopMenuOption.click();
-		showOnLeftMenuOption.click();
+	public CategoryPage clickOnRadioButton1()
+	{
+		gu.scrollToElement(driver,radioButton1);
+	    gu.hoverOverElement(driver,radioButton1);
 		return this;
+		
+	}
+	public CategoryPage clickOnRadioButton2()
+	{
+		gu.scrollToElement(driver,radioButton2);
+		gu.hoverOverElement(driver,radioButton2);
+		return this;
+		
+		
 	}
 	public CategoryPage clickCategorySaveButton() {
 		 categorySaveButton.click();
@@ -79,7 +98,7 @@ public class CategoryPage {
 		return this;
 	}
 	public CategoryPage enterUpdateCategory() {
-		enterUpdateCategory.sendKeys("Updated toys");
+		enterUpdateCategory.sendKeys("Phone1232");
 		return this;
 	}
 	public CategoryPage clickUpdateButton() {

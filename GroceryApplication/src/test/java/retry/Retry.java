@@ -7,12 +7,12 @@ import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
 public class Retry implements IRetryAnalyzer {
-	private static final Logger LOG = (Logger) LogManager.getLogger("Retry.class");  
-	 private static final int maxTry = 3;   
-	 private int count = 0;  
+	private static final Logger LOG = (Logger) LogManager.getLogger("Retry.class");  //logger is initialized to track and log test retry attempt using log4j.
+	 private static final int maxTry = 3; //max number of retry attempt 
+	 private int count = 0;  //how many times the retry has been attempted for the current test case
 	 public boolean retry(final ITestResult iTestResult) 
 	 { 
-	 	if (!iTestResult.isSuccess())  
+	 	if (!iTestResult.isSuccess())  //checks if the test fails
 	 	{   
 	 		if (this.count < maxTry) {      				 
 	 			LOG.info("Retrying test " + iTestResult.getName() + " with status " 

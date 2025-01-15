@@ -13,13 +13,13 @@ public class HomePage {
 		PageFactory.initElements(driver,this);
 	}
 	@FindBy(xpath="//span[text()='7rmart supermarket']")WebElement homePageText;
-	@FindBy(xpath="//a[@class='active nav-link']")WebElement categoryButton;
-	@FindBy(xpath="//p[text()='Sub Category']")WebElement subCategoryButton;
+	@FindBy(xpath="//p[text()='Category']") WebElement categoryButton;
+	@FindBy(xpath="//p[text()='Sub Category']") WebElement subCategoryButton;
 	@FindBy(xpath="//p[text()='Manage News']") WebElement manageNewsButton;
+	@FindBy(xpath="//p[contains(text(), 'Manage Footer Text')]")WebElement managefootertextButton;
 	
 	public String getHomePageText() {
 		return homePageText.getText();
-		
 	}
 	public CategoryPage clickCategoryButton() {
 		categoryButton.click();
@@ -32,5 +32,9 @@ public class HomePage {
 	public ManageNewsPage clickManageNews() {
 		manageNewsButton.click();
 		return new ManageNewsPage(driver);
+	}
+	public ManageFooterTextPage clickManageFooterTextButton() {
+		managefootertextButton.click();
+		return new ManageFooterTextPage(driver);
 	}
 }

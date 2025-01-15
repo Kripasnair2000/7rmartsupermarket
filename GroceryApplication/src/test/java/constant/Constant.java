@@ -8,7 +8,7 @@ public class Constant {
 	
 	
 	public static final String CONFIGFILE=System.getProperty("user.dir")+"\\src\\main\\resources\\Config.properties";
-	public static final String TESTDATAFILE=System.getProperty("user.dir")+"\\src\\main\\resources\\TestData\\Grocery Application.xlsx";
+	public static final String TESTDATAFILE=System.getProperty("user.dir")+"\\src\\main\\resources\\TestData\\GroceryApplication.xlsx";
 	
 	public static final String category_verifyAddCategory="Alert message is not as expected";
 	public static final String category_verifySearchCategory="Search result message is not as expected";
@@ -25,4 +25,6 @@ public class Constant {
 	public static final String mnp_verifyAddManageNews="Alert message is not as expected";
 	public static final String mnp_verifySearchManageNews="Table title is not displayed as expected";
 	public static final String mnp_verifyResetManageNews="Table title is not displayed as expected";
+	
+	public static final String mfp_editFooterText="Alert message is not as expected";
 }
