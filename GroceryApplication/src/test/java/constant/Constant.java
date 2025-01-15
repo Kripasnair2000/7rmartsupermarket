@@ -27,4 +27,5 @@ public class Constant {
 	public static final String mnp_verifyResetManageNews="Table title is not displayed as expected";
 	
 	public static final String mfp_editFooterText="Alert message is not as expected";
+	public static final String mcp_editContact="Alert message is not as expected";
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-15T12:09:50 IST" name="Mytestsuite" finished-at="2025-01-15T12:10:04 IST" duration-ms="14508">
+  <suite started-at="2025-01-15T13:08:30 IST" name="Mytestsuite" finished-at="2025-01-15T13:08:37 IST" duration-ms="6913">
     <groups>
     </groups>
-    <test started-at="2025-01-15T12:09:50 IST" name="myTest" finished-at="2025-01-15T12:10:04 IST" duration-ms="14508">
-      <class name="testcase.SubCategoryTest">
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcase.SubCategoryTest@4f0f2942]" started-at="2025-01-15T12:09:50 IST" name="initializeBrowser" finished-at="2025-01-15T12:09:52 IST" duration-ms="2701" status="PASS">
+    <test started-at="2025-01-15T13:08:30 IST" name="myTest" finished-at="2025-01-15T13:08:37 IST" duration-ms="6913">
+      <class name="testcase.ManageContactTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcase.ManageContactTest@58e1d9d]" started-at="2025-01-15T13:08:30 IST" name="initializeBrowser" finished-at="2025-01-15T13:08:34 IST" duration-ms="3479" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,74 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyAddSubCategoryWithValidDetails()[pri:1, instance:testcase.SubCategoryTest@4f0f2942]" started-at="2025-01-15T12:09:52 IST" name="verifyAddSubCategoryWithValidDetails" finished-at="2025-01-15T12:09:57 IST" duration-ms="4386" status="PASS">
+        <test-method signature="updateContactTextWithNewValidCredentials()[pri:0, instance:testcase.ManageContactTest@58e1d9d]" started-at="2025-01-15T13:08:34 IST" name="updateContactTextWithNewValidCredentials" finished-at="2025-01-15T13:08:37 IST" duration-ms="3389" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddSubCategoryWithValidDetails -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcase.SubCategoryTest@4f0f2942]" started-at="2025-01-15T12:09:57 IST" name="driverQuit" finished-at="2025-01-15T12:09:57 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- updateContactTextWithNewValidCredentials -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcase.ManageContactTest@58e1d9d]" started-at="2025-01-15T13:08:37 IST" name="driverQuit" finished-at="2025-01-15T13:08:37 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyAddSubCategoryWithValidDetails status=SUCCESS method=SubCategoryTest.verifyAddSubCategoryWithValidDetails()[pri:1, instance:testcase.SubCategoryTest@4f0f2942] output={null}]]]>
+                <![CDATA[[TestResult name=updateContactTextWithNewValidCredentials status=SUCCESS method=ManageContactTest.updateContactTextWithNewValidCredentials()[pri:0, instance:testcase.ManageContactTest@58e1d9d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcase.SubCategoryTest@4f0f2942]" started-at="2025-01-15T12:09:57 IST" name="initializeBrowser" finished-at="2025-01-15T12:09:59 IST" duration-ms="1831" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifySearchSubCategory()[pri:2, instance:testcase.SubCategoryTest@4f0f2942]" started-at="2025-01-15T12:09:59 IST" name="verifySearchSubCategory" finished-at="2025-01-15T12:10:01 IST" duration-ms="1960" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchSubCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcase.SubCategoryTest@4f0f2942]" started-at="2025-01-15T12:10:01 IST" name="driverQuit" finished-at="2025-01-15T12:10:01 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifySearchSubCategory status=SUCCESS method=SubCategoryTest.verifySearchSubCategory()[pri:2, instance:testcase.SubCategoryTest@4f0f2942] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testcase.SubCategoryTest@4f0f2942]" started-at="2025-01-15T12:10:01 IST" name="initializeBrowser" finished-at="2025-01-15T12:10:02 IST" duration-ms="1898" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method signature="verifyResetSubCategory()[pri:3, instance:testcase.SubCategoryTest@4f0f2942]" started-at="2025-01-15T12:10:02 IST" name="verifyResetSubCategory" finished-at="2025-01-15T12:10:04 IST" duration-ms="1672" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyResetSubCategory -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testcase.SubCategoryTest@4f0f2942]" started-at="2025-01-15T12:10:04 IST" name="driverQuit" finished-at="2025-01-15T12:10:04 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyResetSubCategory status=SUCCESS method=SubCategoryTest.verifyResetSubCategory()[pri:3, instance:testcase.SubCategoryTest@4f0f2942] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverQuit -->
-      </class> <!-- testcase.SubCategoryTest -->
+      </class> <!-- testcase.ManageContactTest -->
     </test> <!-- myTest -->
   </suite> <!-- Mytestsuite -->
 </testng-results>

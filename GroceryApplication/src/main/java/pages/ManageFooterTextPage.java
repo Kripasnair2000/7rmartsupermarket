@@ -24,7 +24,7 @@ public class ManageFooterTextPage {
 		   }
 	    public ManageFooterTextPage updateAddress(){
 	    	enterAddress.clear();
-	    	enterAddress.sendKeys("Kollam");
+	    	enterAddress.sendKeys("Thrissur");
 			return this;
 		   }
 	    public ManageFooterTextPage clickUpdateButton() {

@@ -4,20 +4,17 @@
   <parameter name="browser" value="Chrome"/>
   <listeners>
     <listener class-name="listeners.Listeners"/>
+    <listener class-name="listeners.RetryListener"/>
   </listeners>
   <test thread-count="5" name="myTest(failed)">
     <classes>
-      <class name="testcase.SubCategoryTest">
+      <class name="testcase.ManageContactTest">
         <methods>
-          <include name="verifyDeleteButton"/>
           <include name="driverQuit"/>
-          <include name="verifyNewCatgoryButton"/>
-          <include name="verifyEditButton"/>
-          <include name="verifySearchButton"/>
-          <include name="verifyResetButton"/>
           <include name="initializeBrowser"/>
+          <include name="editFooterTextWithNewValidCredentials"/>
         </methods>
-      </class> <!-- testcase.SubCategoryTest -->
+      </class> <!-- testcase.ManageContactTest -->
     </classes>
   </test> <!-- myTest(failed) -->
 </suite> <!-- Failed suite [Mytestsuite] -->

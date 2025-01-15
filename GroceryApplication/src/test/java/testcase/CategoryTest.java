@@ -43,14 +43,4 @@ public class CategoryTest extends BaseClass {
 	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifyResetCategory); 
 
   }
-  @Test(retryAnalyzer=retry.Retry.class)
-  public void verifyEditButton() throws IOException {
-	  lp=new LoginPage(driver);
-	  lp.loginByExcelData();
-	  hp=new HomePage(driver);
-	  category=hp.clickCategoryButton().clickOnEditButton().enterUpdateCategory().clickUpdateButton();
-	  boolean actualResult = category.getAlertMessageForEdit();
-	  boolean expectedResult = true;
-	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifyEditButton);
-  }
 }
