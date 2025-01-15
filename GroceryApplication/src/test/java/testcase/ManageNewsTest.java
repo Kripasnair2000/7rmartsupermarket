@@ -17,7 +17,7 @@ public class ManageNewsTest extends BaseClass {
 	HomePage hp;
 
 	@Test(groups="smoke")
-	public void verifyAddManageNews() throws IOException {
+	public void verifyAddManageNewswithValidCredentials() throws IOException {
 		lp = new LoginPage(driver);
 		hp = lp.loginByExcelData();
 		mnp = hp.clickManageNews().clickOnNewManageNewsButton().enterManageNewsField().clickOnSaveButton();
