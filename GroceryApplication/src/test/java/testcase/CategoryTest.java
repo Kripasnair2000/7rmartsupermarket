@@ -16,7 +16,7 @@ public class CategoryTest extends BaseClass {
 	HomePage hp;
 	GeneralUtilities gu=new GeneralUtilities();
   @Test(priority=1)
-  public void verifyAddNewCatgoryWithValidDetails() throws IOException {
+  public void verifyUserIsAbleToAddNewCatgoryWithValidDetails() throws IOException {
 	  lp=new LoginPage(driver);
 	  hp=lp.loginByExcelData();
 	  category=hp.clickCategoryButton().clickNewButton().enterCategoryField().selectGroupsOnCategoryList().uploadImage().clickOnRadioButton1().clickOnRadioButton2().clickCategorySaveButton();
@@ -25,7 +25,7 @@ public class CategoryTest extends BaseClass {
 	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifyAddCategory);  
   }
   @Test(priority=2)
-  public void verifySearchExistingCategory() throws IOException{
+  public void verifyUserIsAbleToSearchExistingCategory() throws IOException{
 	  lp=new LoginPage(driver);
 	  hp=lp.loginByExcelData();
 	  category=hp.clickCategoryButton().clickSearchButton().enterSearchCategoryField().clickSearchButtonInside();
@@ -34,7 +34,7 @@ public class CategoryTest extends BaseClass {
 	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifySearchCategory); 
   }
   @Test(priority=3)
-  public void verifyResetCategory() throws IOException {
+  public void verifyUserIsAbleToResetCategory() throws IOException {
 	  lp=new LoginPage(driver);
 	  lp.loginByExcelData();
 	  category=hp.clickCategoryButton().clickResetButton();

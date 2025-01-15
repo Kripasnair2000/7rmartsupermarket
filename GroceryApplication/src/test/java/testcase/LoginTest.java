@@ -25,7 +25,7 @@ public class LoginTest extends BaseClass {
   }
 
 	@Test(dataProvider = "data provider")
-	public void loginWithInvalidUsernameAndValidPassword(String username, String password) {
+	public void verifyUserLoginWithInvalidUsernameAndValidPassword(String username, String password) {
 		login = new LoginPage(driver);
 		login.enterUserName(username);
 		login.enterPassword(password);
@@ -42,7 +42,7 @@ public class LoginTest extends BaseClass {
 
 	
 	@Test
-	public void loginWithValidUsernameAndInvalidPassword() throws IOException {
+	public void verifyUserLoginWithValidUsernameAndInvalidPassword() throws IOException {
 		login = new LoginPage(driver);
 	    hp=login.loginByExcelData1();
 	    boolean actualresult = login.getAlert().contains("Invalid Username/Password");
@@ -53,7 +53,7 @@ public class LoginTest extends BaseClass {
 
 
 	@Test
-	public void loginWithInValidUsernameAndInvalidPassword() throws IOException {
+	public void verifyUserLoginWithInValidUsernameAndInvalidPassword() throws IOException {
 		login = new LoginPage(driver);
 	    hp=login.loginByExcelData2();
 	    boolean actualresult = login.getAlert().contains("Invalid Username/Password");

@@ -15,9 +15,9 @@ public class ManageFooterTextTest extends BaseClass{
 	HomePage hp;
 	ManageFooterTextPage mfp;
   @Test
-  public void editFooterTextWithNewValidCredentials() throws IOException
+  public void verifyUserIsAbleToEditFooterTextWithValidCredentials() throws IOException
   {	    
-	  lp=new LoginPage(driver);
+	    lp=new LoginPage(driver);
 		hp= lp.loginByExcelData();
 		mfp=hp.clickManageFooterTextButton().clickEditButton().updateAddress().clickUpdateButton();
 		boolean actualresult=mfp.alertMessage();

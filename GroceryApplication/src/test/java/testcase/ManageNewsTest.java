@@ -17,7 +17,7 @@ public class ManageNewsTest extends BaseClass {
 	HomePage hp;
 
 	@Test(groups="smoke")
-	public void verifyAddManageNewswithValidCredentials() throws IOException {
+	public void verifyUserIsAbleToAddManageNewswithValidCredentials() throws IOException {
 		lp = new LoginPage(driver);
 		hp = lp.loginByExcelData();
 		mnp = hp.clickManageNews().clickOnNewManageNewsButton().enterManageNewsField().clickOnSaveButton();
@@ -27,7 +27,7 @@ public class ManageNewsTest extends BaseClass {
 	}
 
 	@Test
-	public void verifySearchManageNews() throws IOException {
+	public void verifyUserIsAbleToSearchManageNews() throws IOException {
 		lp = new LoginPage(driver);
 		hp = lp.loginByExcelData();
 		mnp = hp.clickManageNews().clickOnManageNewsSearchButton().enterSearchNewsTitleField().clickOnSearchButton();
@@ -38,7 +38,7 @@ public class ManageNewsTest extends BaseClass {
 	}
 
 	@Test(groups="smoke")
-	public void verifyResetManageNews() throws IOException {
+	public void verifyUserIsAbleToResetManageNews() throws IOException {
 		lp = new LoginPage(driver);
 		hp = lp.loginByExcelData();
 		mnp = hp.clickManageNews().clickOnResetButton();

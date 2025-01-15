@@ -15,7 +15,7 @@ public class ManageContactTest extends BaseClass {
 	HomePage hp;
 	ManageContactPage mcp;
   @Test
-  public void updateContactTextWithNewValidCredentials() throws IOException
+  public void verifyUserIsAbleToUpdateContactTextWithNewValidCredentials() throws IOException
   {	    
 	   lp=new LoginPage(driver);
 		hp= lp.loginByExcelData();

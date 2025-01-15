@@ -13,7 +13,7 @@ public class SubCategoryTest extends BaseClass{
 	HomePage hp;
 	SubCategoryPage sub;
   @Test(priority=1)
-  public void verifyAddSubCategoryWithValidDetails() throws IOException {
+  public void verifyUserIsAbleToAddSubCategoryWithValidDetails() throws IOException {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByExcelData();
 	  hp=new HomePage(driver);
@@ -24,7 +24,7 @@ public class SubCategoryTest extends BaseClass{
 	 Assert.assertEquals(actualResult,expectedResult,Constant.sub_verifyNewCatgoryButton);  
   }
   @Test(priority=2)
-  public void verifySearchSubCategory() throws IOException{
+  public void verifyUserIsAbleToSearchSubCategory() throws IOException{
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByExcelData();
 	  hp=new HomePage(driver);
@@ -35,7 +35,7 @@ public class SubCategoryTest extends BaseClass{
 	  Assert.assertEquals(expectedResult, actualResult,Constant.sub_verifySearchButton);
   }
   @Test(priority=3)
-  public void verifyResetSubCategory() throws IOException{
+  public void verifyUserIsAbleToResetSubCategory() throws IOException{
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByExcelData();
 	  hp=new HomePage(driver);
