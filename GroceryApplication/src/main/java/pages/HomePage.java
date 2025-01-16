@@ -17,7 +17,7 @@ public class HomePage {
 	@FindBy(xpath="//li//p[text()='Sub Category']") WebElement subCategoryButton;
 	@FindBy(xpath="//p[text()='Manage News']") WebElement manageNewsButton;
 	@FindBy(xpath="//p[text()='Manage Footer Text']")WebElement manageFooterTextButton;
-	@FindBy(xpath="//p[text()='Manage Contact']")WebElement managecContactButton;
+	@FindBy(xpath="//p[text()='Manage Contact']")WebElement manageContactButton;
 	
 	public String getHomePageText() {
 		return homePageText.getText();
@@ -39,7 +39,7 @@ public class HomePage {
 		return new ManageFooterTextPage(driver);
 	}
 	public ManageContactPage clickManageContactButton() {
-		managecContactButton.click();
+		manageContactButton.click();
 		return new ManageContactPage(driver);
 	}
 }

@@ -35,64 +35,51 @@ public class SubCategoryPage {
 	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']") WebElement resultNotFoundMessage;
 	@FindBy(xpath="//h4[text()='List Sub Categories']") WebElement tabletitle;
 	
-	public SubCategoryPage clickNewSubCategoryButton()
-	{
+	public SubCategoryPage clickNewSubCategoryButton(){
 		newButton.click();
 		return this;
 	}
-	public SubCategoryPage clickSelectCategoryOption()
-	{
+	public SubCategoryPage clickSelectCategoryOption(){
 		gu.selectDropdownWithIndex(selectCategory, 8);
 		return this;
 		
 	}
-	public SubCategoryPage enterSubCategoryField()
-	{   
+	public SubCategoryPage enterSubCategoryField(){   
 		enterSubCategory.sendKeys("super");
 		return this;
 	}
-	public SubCategoryPage clickChoosefile()
-	{
+	public SubCategoryPage clickChoosefile(){
 		fu.fileuploadsendKeys(choosefile);
 	 	return this;
 	}
-	public SubCategoryPage clickSaveButton()
-	{
+	public SubCategoryPage clickSaveButton(){
 		saveButton.click();
 		return this;
 	}
-	public SubCategoryPage clickSearchButton()
-	{
+	public SubCategoryPage clickSearchButton(){
 		searchButton.click();
 		return this;
 	}
-	public SubCategoryPage clickSelectSearchCategoryOption()
-	{
+	public SubCategoryPage clickSelectSearchCategoryOption(){
 		gu.selectDropdownWithIndex(selectSearchCategoryOption, 7);
 		return this;
 	}
-	public SubCategoryPage enterSearchSubCategoryField()
-
-	{   
+	public SubCategoryPage enterSearchSubCategoryField(){   
 		searchSubCategoryField.sendKeys("ulitmate");
 		return this;
 	}
-	public SubCategoryPage clickSearchOptionButton()
-	{
+	public SubCategoryPage clickSearchOptionButton(){
 		searchOptionButton.click();
 		return this;
 	}
-	public SubCategoryPage clickResetButton()
-	{
+	public SubCategoryPage clickResetButton(){
 		resetButton.click();
 		return this;
 	}
-	public boolean getAlertMessage()
-	{
+	public boolean getAlertMessage(){
 		return alertmessage.isDisplayed();
 	}
-	public boolean checkResult()
-	{
+	public boolean checkResult(){
 		return resultNotFoundMessage.isDisplayed();
 	}
 	public boolean checkOnTableTitleIsDisplayed() {

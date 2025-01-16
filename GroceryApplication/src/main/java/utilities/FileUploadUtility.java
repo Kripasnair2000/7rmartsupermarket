@@ -16,7 +16,9 @@ public class FileUploadUtility {
 	{
 		element.sendKeys("C:\\Users\\KRIPA S NAIR\\OneDrive\\Pictures\\Screenshots\\Screenshot 2025-01-13 132651.png");
 	}
-	
+	public void fileupload(WebElement element) {
+		element.sendKeys("C:\\Users\\KRIPA S NAIR\\OneDrive\\Pictures\\Screenshots\\Screenshot 2025-01-07 141001.png");
+	}
 	public void FileUploadUtility (WebDriver driver, String filePath, WebElement uploadButton)
 	{
 	String path= System.getProperty("user.dir")+filePath;

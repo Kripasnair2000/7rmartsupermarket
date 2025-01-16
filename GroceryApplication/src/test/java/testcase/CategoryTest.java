@@ -25,7 +25,7 @@ public class CategoryTest extends BaseClass {
 	  Assert.assertEquals(expectedResult,actualResult,Constant.category_verifyAddCategory);  
   }
   @Test(priority=2)
-  public void verifyUserIsAbleToSearchExistingCategory() throws IOException{
+  public void verifyUserIsAbleToSearchCategory() throws IOException{
 	  lp=new LoginPage(driver);
 	  hp=lp.loginByExcelData();
 	  category=hp.clickCategoryButton().clickSearchButton().enterSearchCategoryField().clickSearchButtonInside();

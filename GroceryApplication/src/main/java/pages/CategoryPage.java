@@ -5,11 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.FileUploadUtility;
 import utilities.GeneralUtilities;
 
 public class CategoryPage {
 	public WebDriver driver;
 	GeneralUtilities gu=new GeneralUtilities(); 
+	FileUploadUtility fu=new FileUploadUtility();
 	public CategoryPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
@@ -37,17 +39,15 @@ public class CategoryPage {
 		return this;
 	}
 	public CategoryPage enterCategoryField(){
-		enterCategory.sendKeys("Laysgree");
+		enterCategory.sendKeys("LaysGreen1");
 		return this;
-		
 	}
-	public CategoryPage selectGroupsOnCategoryList()
-	{
+	public CategoryPage selectGroupsOnCategoryList(){
 		selectGroupsCategoryList.click();
 		return this;
 	}
 	public CategoryPage uploadImage() {
-		imageUpload.sendKeys("C:\\Users\\KRIPA S NAIR\\OneDrive\\Pictures\\Screenshots\\Screenshot 2025-01-07 141001.png");
+		fu.fileupload(imageUpload);
 		return this;
 	}
 	public CategoryPage clickOnRadioButton1()
@@ -55,15 +55,12 @@ public class CategoryPage {
 		gu.scrollToElement(driver,radioButton1);
 	    gu.hoverOverElement(driver,radioButton1);
 		return this;
-		
 	}
 	public CategoryPage clickOnRadioButton2()
 	{
 		gu.scrollToElement(driver,radioButton2);
 		gu.hoverOverElement(driver,radioButton2);
 		return this;
-		
-		
 	}
 	public CategoryPage clickCategorySaveButton() {
 		 categorySaveButton.click();
